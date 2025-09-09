@@ -1,11 +1,8 @@
-// front.js
 const form = document.getElementById("chatForm");
 const messagesDiv = document.getElementById("messages");
 const input = document.getElementById("userInput");
 
-// Change this to your deployed Vercel URL
-const API_URL = "https://2049-theta.vercel.app/api/chat";
-
+const API_URL = "https://2049-theta.vercel.app/api/chat"; // Same domain if deployed on Vercel
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -21,21 +18,17 @@ form.addEventListener("submit", async (e) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: userMsg }),
     });
+
     const data = await res.json();
     appendMessage("ALPACA", data.reply || "No reply");
   } catch (err) {
-    console.error("Fetch error:", err);
-    appendMessage("Error", "Unable to reach server");
+    appendMessage("Error", "Server unreachable");
   }
 });
 
-  function appendMessage(sender, text) {
+function appendMessage(sender, text) {
   const msg = document.createElement("div");
   msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
   messagesDiv.appendChild(msg);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
- }
-
-
-
-
+}
