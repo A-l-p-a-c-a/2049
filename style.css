@@ -1,15 +1,46 @@
-#messages {
-  white-space: pre-wrap;
-  font-family: monospace;
-  margin-top: 1em;
-}
-.user {
-  color: #0366d6;
-}
-.ai {
-  color: #6f42c1;
-}
-  
-.messages div { font-size: 16px; 
-              }
-
+      font-family: inherit;
+      font-size: 1em;
+      border: none;
+      cursor: pointer;
+      text-shadow: 0 0 4px #fff;
+      box-shadow: 0 0 6px #f0f;
+      transition: background 0.15s;
+    }
+    .send-btn:hover {
+      background: linear-gradient(90deg,#ff0 15%, #f0f 85%);
+      color: #222;
+      box-shadow: 0 0 10px #ff0;
+    }
+    .footer {
+      position: fixed;
+      width: 100vw;
+      bottom: 0;
+      background: #0e0022;
+      color: #0ff;
+      text-align: center;
+      padding: 10px 0;
+      border-top: 2px solid #ff48c8;
+      font-size: 1em;
+      font-family: 'Orbitron', monospace;
+      letter-spacing: 2px;
+      text-shadow: 0 0 4px #f0f, 0 0 9px #00ffea;
+    }
+    /* Neon box glow for mistakes section */
+    .mistake {
+      border: 3px dashed #ff0;
+      border-radius: 15px;
+      background: rgba(50,0,80,0.8);
+      color: #ff0;
+      box-shadow: 0 0 13px #ff0, 0 0 9px #f0f inset;
+      padding: 18px;
+      margin: 16px auto 0;
+      max-width: 370px;
+      font-size: 1.1em;
+      font-family: inherit;
+      text-align: center;
+      text-shadow: 0 0 6px #fff;
+    }
+    .mistake strong {
+      color: #f0f;
+      letter-spacing: 2px;
+    }
