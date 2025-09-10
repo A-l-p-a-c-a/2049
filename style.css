@@ -60,16 +60,21 @@
       letter-spacing: 2px;
     }
 /* Add to your CSS */
-.chat-window {
-  max-height: 300px;
+#chat {
+  height: 145px;            /* or tweak for mobile */
+  max-height: 35vh;         /* mobile-friendly cap */
   overflow-y: auto;
-  background: #170022;
+  background: rgba(18,0,35,0.76);
+  border-radius: 10px;
+  border: 2px solid #f0f;
   color: #fff;
   font-family: monospace;
-  border-radius: 10px;
   padding: 12px;
-  margin-bottom: 10px;
-  user-select: text;
+  margin-bottom: 16px;
+  font-size: 1.02em;
+  box-shadow: 0 0 11px #f0f inset;
+  word-break: break-word;   /* fixes long text overflow */
+  user-select: text;        /* lets you copy chat */
 }
     #chat {
       height: 145px;
