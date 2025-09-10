@@ -59,6 +59,18 @@
       text-shadow: 0 0 5px #0ff, 0 0 7px #ff0;
       letter-spacing: 2px;
     }
+/* Add to your CSS */
+.chat-window {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #170022;
+  color: #fff;
+  font-family: monospace;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  user-select: text;
+}
     #chat {
       height: 145px;
       overflow-y: auto;
